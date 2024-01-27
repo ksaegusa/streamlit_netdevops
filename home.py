@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("QueryChecker")
+st.title("NetDevOpsSupporter")
 if st.button("Parser"):
     st.switch_page("pages/parse.py")
 if st.button("Regex"):
