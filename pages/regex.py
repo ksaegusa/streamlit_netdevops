@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 st.title("Regex")
 
 log_file = ""
-log_upload = st.toggle("ログアップデート")
+log_upload = st.toggle("ログアップロード")
 
 if log_upload:
     log_file = st.file_uploader("ログアップロード")
