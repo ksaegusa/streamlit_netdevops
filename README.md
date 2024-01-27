@@ -15,10 +15,9 @@ streamlit run home.py
 streamlit run home.py --server.port 80
 ```
 
-## ページ
-1. home
-2. parser  
+## 機能
+1. parser  
 テキストエリアに書き込んだテキスト、もしくはアップロードしたテキストをパース。テンプレートはfiles/templatesに格納しているもの、もしくはアップロードが可能。  
 パース結果をjmespathで絞り込むクエリの確認がでます。
-3. regex  
+2. regex  
 テキストエリアに書き込んだテキスト、もしくはアップロードしたテキストの行にマッチする正規表現の確認ができます。
