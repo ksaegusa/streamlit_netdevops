@@ -1,7 +1,6 @@
 import re 
 
 import streamlit as st
-from annotated_text import annotated_text, annotation
 
 st.set_page_config(layout="wide")
 st.title("Regex")
