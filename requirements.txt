@@ -2,3 +2,4 @@ jmespath==1.0.1
 streamlit==1.30.0
 textfsm==1.1.3
 pandas==2.2.0
+netmiko==4.3.0
