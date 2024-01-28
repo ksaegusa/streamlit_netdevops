@@ -1,4 +1,7 @@
 # streamlit_netdevops
+## 動作確認
+- AlmaLinux9.2
+- Python 3.9.6
 
 ## セットアップ
 ```
