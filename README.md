@@ -21,7 +21,8 @@ streamlit run home.py --server.port 80
 パース結果をjmespathで絞り込むクエリの確認がでます。
 2. regex  
 テキストエリアに書き込んだテキスト、もしくはアップロードしたテキストの行にマッチする正規表現の確認ができます。
-
+3. commander  
+showコマンドの実行結果の確認とテキストダウンロードができます。
 
 ## 利用例
 1. parser
@@ -38,6 +39,5 @@ streamlit run home.py --server.port 80
    正規表現を入力し\[抽出\]をクリックします。マッチした行数と文が表示されます。
    <img width="572" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/08717c50-707c-4679-ad30-9904257c0130">  
 
-
-
-   
+3. commander  
+   認証情報を入力し、コマンドを実行します。
