@@ -143,5 +143,5 @@ with commander:
         st.download_button(
             label="テキストダウンロード",
             data=output,
-            file_name=f"{address}_{command.replace(' ','_')}.text"
+            file_name=f"{address}_{command.replace(' ','_').replace('|','_')}.text"
         )
