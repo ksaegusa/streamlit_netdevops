@@ -41,3 +41,8 @@ showコマンドの実行結果の確認とテキストダウンロードがで�
 
 3. commander  
    認証情報を入力し、コマンドを実行します。
+   <img width="555" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/d6fdb426-29d3-4983-bdb5-07239daccdb3">  
+   実行結果が表示されます。\[テキストダウンロード\]をクリックすると`<アドレス>_<コマンド>.text`で保存されます。
+   コマンド内のスペースは_に置換されます。
+   <img width="584" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/c080394e-e190-49ac-b43f-8cec4ff4f52d">
+
