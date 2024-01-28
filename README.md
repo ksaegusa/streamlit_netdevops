@@ -27,7 +27,7 @@ streamlit run home.py --server.port 80
 1. parser
    テキストとパーサーを選択すると、パース結果が表示されます
    <img width="550" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/813f797d-856c-4eb8-9a98-f79e51718cd0">  
-   クエリ文を実行すると、クエリ結果が表示されます。
+   クエリ文を入力し、\[クエリ実行\]をクリックします。クエリ結果が表示されます。
    <img width="586" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/9c3b5ea7-70ad-4233-bb3e-dde3b2e69ec0">  
    jmespathのfunctionも利用可能です。
    <img width="582" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/61eb8a89-1318-4eb9-8968-6320fa78ff44">  
