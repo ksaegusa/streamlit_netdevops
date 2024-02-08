@@ -20,8 +20,7 @@ streamlit run home.py --server.port 80
 
 ## Docker
 ```
-docker build .
-podman run -dt --name=st_netdevop -p 8080:8501 <ID>
+(podman|docker) run -dt --name=st_netdevop -p 8080:8501 docker.io/ksaegusa0/st_netdevops_supporter:latest
 ```
 
 ## 機能
