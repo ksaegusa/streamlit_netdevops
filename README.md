@@ -18,6 +18,12 @@ streamlit run home.py
 streamlit run home.py --server.port 80
 ```
 
+## Docker
+```
+docker build .
+podman run -dt --name=st_netdevop -p 8080:8501 <ID>
+```
+
 ## 機能
 1. parser  
 テキストエリアに書き込んだテキスト、もしくはアップロードしたテキストをパース。テンプレートはfiles/templatesに格納しているもの、もしくはアップロードが可能。  
