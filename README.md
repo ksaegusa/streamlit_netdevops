@@ -23,6 +23,11 @@ streamlit run home.py --server.port 80
 (podman|docker) run -dt --name=st_netdevop -p 8080:8501 docker.io/ksaegusa0/st_netdevops_supporter:latest
 ```
 
+ローカルのテンプレートを読み込ませる場合
+```
+(podman|docker) run -dt --name=st_netdevop -p 8080:8501 --mount type=bind,source=<loca_templates_path>,target=/app/st_ndos/files/templates docker.io/ksaegusa0/st_netdevops_supporter:latest
+```
+
 ## 機能
 1. parser  
 テキストエリアに書き込んだテキスト、もしくはアップロードしたテキストをパース。テンプレートはfiles/templatesに格納しているもの、もしくはアップロードが可能。  

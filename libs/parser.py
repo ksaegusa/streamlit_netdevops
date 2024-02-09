@@ -10,33 +10,43 @@ import textfsm
 def st_parser(st):
     st.title("Parser")
 
+    log_text = ""
+    template = ""
+    parser_template = ""
     parsed_list = list()
     template_root_dir = "files/templates/"
     template_dir_full_path = glob.glob(f"{template_root_dir}*.textfsm")
     template_dir = list(map(lambda x: x.replace(template_root_dir,""),template_dir_full_path))
 
-    log_upload = st.toggle("ログアップロード")
-    if log_upload:
-        log_file = st.file_uploader("ログファイル")
-    else:
-        log_file = st.text_area("テキスト貼り付け", key="parser_textarea")
+    log_block, parser_block = st.columns(2)
 
-    template_upload = st.toggle("テンプレートアップロード")
-    if template_upload:
-        parser_file = st.file_uploader("パーサー")
-    else:
-        parser_file = st.selectbox("パーサー", template_dir)
-
-    if log_file and parser_file:
+    with log_block:
+        log_upload = st.toggle("ログアップロード")
         if log_upload:
-            text = log_file.getvalue().decode("utf-8")
+            log_file = st.file_uploader("ログファイル")
+            if log_file:
+                text = log_file.getvalue().decode("utf-8")
+                log_text = st.text_area("ログ", text, height=391)
         else:
-            text = log_file
+            log_file = st.text_area("テキスト貼り付け", key="parser_textarea")
+            log_text = log_file
+
+    with parser_block:
+        template_upload = st.toggle("テンプレートアップロード")
         if template_upload:
-            template = StringIO(parser_file.getvalue().decode("utf-8"))
+            parser_file = st.file_uploader("パーサー")
+            if parser_file:
+                template = parser_file.getvalue().decode("utf-8")
         else:
-            with open(template_root_dir + parser_file, "r", encoding="UTF-8") as f:
-                template = StringIO(f.read())
+            parser_file = st.selectbox("パーサー", template_dir)
+            if parser_file:
+                with open(template_root_dir + parser_file, "r", encoding="utf-8") as f:
+                    template = f.read()
+        if template:
+            parser_template = st.text_area("テンプレート", template, height=391)
+
+    st.divider()
+    if log_text and parser_template:
         fsm = textfsm.TextFSM(template)
         header = fsm.header
         parsed_data = fsm.ParseText(text)

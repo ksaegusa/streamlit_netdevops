@@ -22,6 +22,7 @@ def st_commander(st):
         address = st.text_input("アドレス","X.X.X.X")
         user = st.text_input("ユーザー","admin")
         password = st.text_input("パスワード", "password")
+        port = st.number_input("ポート",22),
         secret = st.text_input("enableパスワード", "")
         device_type = st.selectbox("デバイスタイプ", device_type_list)
 
@@ -32,15 +33,15 @@ def st_commander(st):
         "host": address,
         "username": user,
         "password": password,
+        "port": port,
         "secret": secret
     }
 
     if st.button("実行"):
         with ConnectHandler(**device) as net_connect:
+            if secret:
+                net_connect.enable()
             output = net_connect.send_command(command)
-
-        if secret:
-            net_connect.enable()
 
         commander_container = st.container(border=True, height=700)
         commander_container.code(output, language="log")
