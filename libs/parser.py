@@ -47,7 +47,7 @@ def st_parser(st):
 
     st.divider()
     if log_text and parser_template:
-        fsm = textfsm.TextFSM(template)
+        fsm = textfsm.TextFSM(StringIO(template))
         header = fsm.header
         parsed_data = fsm.ParseText(text)
 
