@@ -49,7 +49,7 @@ def st_parser(st):
     if log_text and parser_template:
         fsm = textfsm.TextFSM(StringIO(template))
         header = fsm.header
-        parsed_data = fsm.ParseText(text)
+        parsed_data = fsm.ParseText(log_text)
 
         for i in parsed_data:
             obj = {}
