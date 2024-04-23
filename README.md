@@ -39,21 +39,30 @@ showコマンドの実行結果の確認とテキストダウンロードがで�
 
 ## 利用例
 1. parser
-   テキストとパーサーを選択すると、パース結果が表示されます
+   テキストとパーサーを選択すると、パース結果が表示されます  
    <img width="550" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/813f797d-856c-4eb8-9a98-f79e51718cd0">  
-   クエリ文を入力し、\[クエリ実行\]をクリックします。クエリ結果が表示されます。
+   クエリ文を入力し、\[クエリ実行\]をクリックします。クエリ結果が表示されます。  
    <img width="586" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/9c3b5ea7-70ad-4233-bb3e-dde3b2e69ec0">  
-   jmespathのfunctionも利用可能です。
+   jmespathのfunctionも利用可能です。  
    <img width="582" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/61eb8a89-1318-4eb9-8968-6320fa78ff44">  
 
-2. regex
-   テキストに対して正規表現のマッチした行を表示させます。
+   ChatGPTにクエリ文を確認することが可能です  
+   ※ 取り扱う情報にはご注意ください  
+   利用時は[API Key Setting]からOpenAIのAPI Keyを入力する  
+   ![image](https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/dd987e14-e860-4c72-9085-821ebac4fae8)  
+   質問を入力し実行を押し応答があるまで待機  
+   回答としてクエリが表示される。
+   ![image](https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/9a3ab715-16b3-4cbb-81de-f1ae6b8fe685)
+
+
+3. regex
+   テキストに対して正規表現のマッチした行を表示させます。  
    <img width="609" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/504abf06-6d97-440d-96e0-c0f5ec0d9fbd">  
-   正規表現を入力し\[抽出\]をクリックします。マッチした行数と文が表示されます。
+   正規表現を入力し\[抽出\]をクリックします。マッチした行数と文が表示されます。  
    <img width="572" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/08717c50-707c-4679-ad30-9904257c0130">  
 
-3. commander  
-   認証情報を入力し、コマンドを実行します。
+4. commander  
+   認証情報を入力し、コマンドを実行します。  
    <img width="555" alt="image" src="https://github.com/ksaegusa/streamlit_netdevops/assets/33768444/d6fdb426-29d3-4983-bdb5-07239daccdb3">  
    実行結果が表示されます。\[テキストダウンロード\]をクリックすると`<アドレス>_<コマンド>.text`で保存されます。  
    コマンド内のスペースおよびパイプはアンダースコアに置換されます。
