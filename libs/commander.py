@@ -33,7 +33,7 @@ def st_commander(st):
         "host": address,
         "username": user,
         "password": password,
-        "port": port,
+        "port": port[0],
         "secret": secret
     }
 
@@ -48,5 +48,5 @@ def st_commander(st):
         st.download_button(
             label="テキストダウンロード",
             data=output,
-            file_name=f"{address}_{command.replace(' ','_').replace('|','_')}.text"
+            file_name=f"{address}_{command.replace(' ','_').replace('|','_')}.txt"
         )
