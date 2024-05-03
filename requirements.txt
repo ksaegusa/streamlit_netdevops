@@ -6,3 +6,4 @@ netmiko==4.3.0
 langchain==0.1.16
 langchain-core==0.1.45
 openai==1.23.2
+pyarrow==15.0.1

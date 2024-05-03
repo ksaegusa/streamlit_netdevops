@@ -51,7 +51,6 @@ def st_parser(st):
 
     log_text = ""
     template = ""
-    parser_template = ""
     parsed_list = list()
     template_root_dir = "files/templates/"
     template_dir_full_path = glob.glob(f"{template_root_dir}*.textfsm")
@@ -85,10 +84,10 @@ def st_parser(st):
                 with open(template_root_dir + parser_file, "r", encoding="utf-8") as f:
                     template = f.read()
         if template:
-            parser_template = st.text_area("テンプレート", template, height=391)
+            template = st.text_area("テンプレート", template, height=391)
 
     st.divider()
-    if log_text and parser_template:
+    if log_text and template:
         fsm = textfsm.TextFSM(StringIO(template))
         header = fsm.header
         parsed_data = fsm.ParseText(log_text)
