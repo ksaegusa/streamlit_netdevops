@@ -40,7 +40,7 @@ def generate_prompt():
     return prompt_template
 
 def exec_gpt(prompt_template, question,context, api_key):
-    model = ChatOpenAI(model="gpt-3.5-turbo-0125", api_key=api_key, temperature=0,)
+    model = ChatOpenAI(model="gpt-4o", api_key=api_key, temperature=0,)
     chain = prompt_template | model | StrOutputParser()
     res = chain.invoke({'context': context, 'question':question})
     print(res)
